@@ -17,22 +17,27 @@ def my_hook(d):
         print('Done downloading, now converting ...')
 
 
-def download(link, root_folder, filename) -> None:
+def download(link: str, root_folder: str, filename: str, audio: bool = True) -> None:
     """download videos from youtube
     TODO:
     * change file format to whatever we want
-    * split audio and video
+    * split audio and video by not calling download twice.
     * why is download being called twice??
 
     """
     ydl_opts = {
         'logger': MyLogger(),
         'progress_hooks': [my_hook],
-        'outtmpl': f'{root_folder}/{filename}'
+        'outtmpl': f'{root_folder}/{filename}',
     }
+    if audio:
+        ydl_opts['postprocessors'] = [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }]
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        # TODO: find out how to save to specific location with a certain filename
         ydl.download([link])
     
 if __name__ == "__main__":

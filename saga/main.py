@@ -5,3 +5,4 @@ if __name__ == "__main__":
     folder = "output"
     filename = "rgss"
     download(link, folder, filename)
+    download(link, folder, filename, audio=False)
