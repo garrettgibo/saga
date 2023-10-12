@@ -1,0 +1,34 @@
+[[package]]
+name = "pytube"
+version = "15.0.0"
+description = "Python 3 library for downloading YouTube Videos."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "youtube-dl"
+version = "2021.12.17"
+description = "YouTube video downloader"
+category = "main"
+optional = false
+python-versions = "*"
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/ytdl-org/youtube-dl.git"
+reference = "HEAD"
+resolved_reference = "00ef748cc0e35ee60efd0f7a00e373ab8d1af86b"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "69a4d38a9fa672f031a08efde46ce096bc45190a5dded1bb3b2bea029d4c3752"
+
+[metadata.files]
+pytube = [
+    {file = "pytube-15.0.0-py3-none-any.whl", hash = "sha256:07b9904749e213485780d7eb606e5e5b8e4341aa4dccf699160876da00e12d78"},
+    {file = "pytube-15.0.0.tar.gz", hash = "sha256:076052efe76f390dfa24b1194ff821d4e86c17d41cb5562f3a276a8bcbfc9d1d"},
+]
+youtube-dl = []

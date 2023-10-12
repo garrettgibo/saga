@@ -7,6 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pytube = "^15.0.0"
+youtube-dl = {git = "https://github.com/ytdl-org/youtube-dl.git"}
 
 
 [build-system]
