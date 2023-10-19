@@ -130,6 +130,7 @@ venv.bak/
 
 
 # Video files
+output/
 *.mkv
 *.mp3
 *.mp4

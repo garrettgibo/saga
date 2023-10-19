@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 pytube = "^15.0.0"
 youtube-dl = {git = "https://github.com/ytdl-org/youtube-dl.git"}
+opencv-python = "^4.8.1.78"
 
 
 [build-system]
